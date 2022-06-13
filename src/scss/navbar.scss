@@ -1,0 +1,21 @@
+@use 'util/mixins.scss' as mix;
+@use 'util/vars.scss' as var;
+.navbar{
+    @include mix.flex();
+    width: 100vw;
+    height: 10vh;
+    background-color: var.$dark-violet;
+    color: var.$light-color;
+    & ul{
+        list-style: none;
+        & a{
+            text-decoration: none;
+            color: var.$light-grey;
+            transition: var.$fast var.$EaseInCirc;
+            &:hover,
+            &:focus{
+                color: var.$light-color;
+            }
+        }
+    }
+}

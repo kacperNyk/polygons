@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/index.css">
+    <script src="dist/app.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Wielokąty Foremne</h1>
+            <ul>
+                <li><a href="https://github.com/kacperNyk/formValidation">github repo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="form__container">
+        <form class="form" action="#" id="form">
+            <div class="label__con">
+                <label for="">liczba boków</label>
+                    <input type="number" min="3" id="NOArms" placeholder="wpisz liczbę" >
+            </div>
+            <div class="label__con">
+                <label for="">Długość boku cm</label>
+                    <input type="number" id="LOArms" placeholder="wpisz liczbę" >
+            </div>
+            <div class="label__con">
+                <label for="">Zaokrąglenie</label>
+                    <input type="number" id="roundingValue" placeholder="wpisz liczbę" >
+            </div>
+            <div class="label__con">
+                <label for="">przekątne</label>
+                    <input type="checkbox" id="diagonalsCheckbox" checked>
+            </div>
+            <div class="label__con">
+                <label for="">promień okręgu wpisanego</label>
+                    <input type="checkbox" id="InsCirc" checked>
+            </div>
+            <div class="label__con">
+                <label for="">miara kąta wewnętrznego</label>
+                    <input type="checkbox" id="internalAngleCheckbox" checked>
+            </div>
+            <button class="btn submitBtn" id="submitBtn" type="submit">Dalej</button>
+        </form>
+    </main>
+    <div class="output__con" id="outputCon"></div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+export function getInteriorAngleValue(n){return 180*(n-2)/n}export function getNOdiagonals(n){return n*(n-3)/2}export function getRadiusOfTheInscribedCircle(n,e){return n/(2*Math.tan(Math.PI/e))}export function getAreaOfPolygon(n,e,t){return n*e*t/2}export function numRoundingToGivenIndex(n,e){return Number(n.toFixed(e))}
+//# sourceMappingURL=functions.js.map

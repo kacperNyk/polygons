@@ -1,0 +1,25 @@
+@use 'vars.scss' as var;
+
+@mixin flex ($direction: row, $justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
+@mixin border-hover($color) {
+    transition: var.$fast var.$EaseInCirc;
+    &:hover,
+    &:focus {
+      border-color: $color;
+    }
+}
+
+@mixin hover-bg($bg) {
+    transition: var.$normal var.$EaseInCirc;
+    &:hover,
+    &:focus{
+        background: $bg;
+    }
+}

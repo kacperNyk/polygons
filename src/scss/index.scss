@@ -1,0 +1,63 @@
+@use 'util/mixins.scss' as mix;
+@use 'util/vars.scss' as var;
+@import 'navbar.scss';
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    @include mix.flex($direction: column);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.form__container{
+    @include mix.flex($direction: column, $justify: flex-start);
+    width: 70vw;
+    height: fit-content;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var.$light-color;
+    & * > input{
+        @include mix.border-hover(var.$dark-violet);
+        @include mix.hover-bg(var.$input-bg);
+        padding:7px;
+        margin-bottom: .2rem;
+        font-size: 1rem;
+        border: 2px solid var.$darker-grey;
+        border-radius: .3rem;
+    }
+    & * > p{
+        font-size: 20px;
+    }
+    & .btn{
+        @include mix.border-hover(var.$dark-violet);
+        @include mix.hover-bg(var.$input-bg);
+        padding: 10px 15px;
+        background: transparent;
+        border: 1px solid var.$light-grey;
+        cursor: pointer;
+    }
+    & .label__con{
+        padding-top: .5rem;
+    }
+    & .submitBtn{
+        margin-top: 1rem;
+    }
+}
+.output__con{
+    @include mix.flex($direction: column);
+    width: 50vw;
+    height: fit-content;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var.$light-color;
+    display: none;
+    &.active{
+        display: flex;
+    }
+}
